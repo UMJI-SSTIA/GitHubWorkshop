@@ -1,5 +1,5 @@
-site_name: "Workshop Template"
-site_description: "A suggested template for hosting workshop in SSTIA"
+site_name: "GitHub Workshop"
+site_description: "A Workshop about GitHub held by SSTIA"
 site_author: "UMJI-SSTIA"
 site_url: "https://UMJI-SSTIA.github.io/GitHubWorkshop/"
 repo_url: "https://github.com/UMJI-SSTIA/GitHubWorkshop"
@@ -101,9 +101,15 @@ plugins:
           build: true
           nav_translations:
             Home: 首页
+            Demo: 示例
+            Demo 1: 示例1
+            Demo 2: 示例2
 
   - minify:
       minify_html: true
 
 nav:
   - Home: index.md
+  - Demo:
+      - Demo 1: Demo/demo1.md
+      - Demo 2: Demo/demo2.md
