@@ -101,15 +101,15 @@ plugins:
           build: true
           nav_translations:
             Home: 首页
-            Demo: 示例
-            Demo 1: 示例1
-            Demo 2: 示例2
+            Worksheets: GitHub Workshop
+            Part 1: 第一部分
+            Part 2: 第二部分
 
   - minify:
       minify_html: true
 
 nav:
   - Home: index.md
-  - Demo:
-      - Demo 1: Demo/demo1.md
-      - Demo 2: Demo/demo2.md
+  - Worksheets:
+      - Part 1: Demo/Part1.md
+      - Part 2: Demo/Part2.md
