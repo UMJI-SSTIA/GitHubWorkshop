@@ -100,7 +100,6 @@ plugins:
           name: 简体中文
           build: true
           nav_translations:
-            Home: 首页
             Worksheets: GitHub Workshop
             Part 1: 第一部分
             Part 2: 第二部分
@@ -109,7 +108,6 @@ plugins:
       minify_html: true
 
 nav:
-  - Home: index.md
   - Worksheets:
       - Part 1: Demo/Part1.md
       - Part 2: Demo/Part2.md
