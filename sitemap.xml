@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/"/>
+    </url>
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part1/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part1/"/>
+    </url>
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part2/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part2/"/>
+    </url>
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/"/>
+    </url>
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part1/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part1/"/>
+    </url>
+    <url>
+        <loc>https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part2/</loc>
+        <lastmod>2026-11-05</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/zh/Demo/Part2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://UMJI-SSTIA.github.io/GitHubWorkshop/Demo/Part2/"/>
+    </url>
+</urlset>
