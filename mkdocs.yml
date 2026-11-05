@@ -102,8 +102,8 @@ plugins:
           nav_translations:
             Home: 首页
             Worksheets: GitHub Workshop
-            Part 1: 第一部分
-            Part 2: 第二部分
+            A brief introduction of GitHub: 关于GitHub的简介
+            The usage of GitHub Repository: 如何使用GitHub
 
   - minify:
       minify_html: true
@@ -111,5 +111,5 @@ plugins:
 nav:
   - Home: index.md
   - Worksheets:
-      - Part 1: Demo/Part1.md
-      - Part 2: Demo/Part2.md
+      - A brief introduction of GitHub: Demo/Part1.md
+      - The usage of GitHub Repository: Demo/Part2.md
