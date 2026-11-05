@@ -1,23 +1,57 @@
 ---
-title: Part
-description: What is GitHub?
+title: A brief introduction of GitHub
+description: What is GitHub? And what is the open-source platform? What can we do with GitHub? This part include some brief introduction regarding the basic knowledge regarding GitHub.
 ---
 
-#Part1
+Towards GitHub
 
 ---
 
-## Part One: Introduction (15 min)
+## Part One: Introduction: Towards GitHub 
 
-### 1. What Is GitHub? (1 min)
+![GitHub logo](../../assets/images/GitHub-Mark.png)
+here is the logo of GitHub
+
+### 1. What Is GitHub? 
 
 GitHub is a code hosting and collaboration platform built on the **Git** version control system. It launched in 2008 and was acquired by Microsoft in 2018. Simply put, it is a website for "storing code and writing code with others."
+
+!!! tip
+    GitHub is different form git. GitHub is a open-source platform and the repositories of it is based on git. However, GitHub is very "open". You can find some unexpected things here even they have nothing to do with coding.
+    Theoretically, you can put anything you want.
+
+**some interesting examples**
+
+- [Free Programming Books](https://github.com/EbookFoundation/free-programming-books): A community-maintained collection of free programming books and learning resources.
+
+    ![Free Programming Books screenshot](../../assets/images/github-free-programming-books.jpg)
+
+- [HowToCook](https://github.com/Anduin2017/HowToCook): A programmer's guide to cooking at home, with clear, step-by-step recipes.
+
+    ![HowToCook screenshot](../../assets/images/github-howtocook.jpg)
+
+    ![HowToCook screenshot (README)](../../assets/images/github-howtocook-readme.jpg)
+
+- [No Code](https://github.com/kelseyhightower/nocode): A humorous project about writing no code and deploying nowhere. This popular "empty repository" still contains a README and other files.
+
+    ![No Code screenshot](../../assets/images/github-nocode.jpg)
+
+- [科技爱好者周刊 (Tech Enthusiast Weekly)](https://github.com/ruanyf/weekly): A weekly technology newsletter that welcomes reader submissions through Issues.
+
+    ![科技爱好者周刊 (Tech Enthusiast Weekly) screenshot](../../assets/images/github-weekly.jpg)
+
+- [OSSU Computer Science](https://github.com/ossu/computer-science): A community-organized curriculum for teaching yourself computer science.
+
+    ![OSSU Computer Science screenshot](../../assets/images/github-ossu-computer-science.jpg)
+
+
+
 
 
 In addition to hosting code, GitHub also provides features such as **Issues (issue tracking), Actions (automation), Pages (static website hosting), Wiki (documentation), and Codespaces (cloud development environments)**. It has evolved into a complete developer community and engineering collaboration ecosystem.
 
 
-### 2. What Is an Open-Source Platform? (4 min)
+### 2. What Is an Open-Source Platform? 
 
 An **open-source platform** is a data hosting platform where source code is made public. It typically hosts a variety of open-source projects.
 
@@ -25,14 +59,22 @@ Open-source platforms usually use licenses to prevent the misuse of open-source 
 
 Well-known (or useful) open-source platforms:
 
-- GitHub
+- [GitHub](https://github.com/trending)
   ```Currently the world's largest open-source community platform with the strongest ecosystem```
-- Gitee
+
+    ![GitHub Trending repositories](../../assets/images/platform-github.jpg)
+
+- [Gitee](https://gitee.com/explore)
   ```A viable domestic alternative to GitHub in China```
-- Hugging Face
+
+    ![Gitee open-source projects](../../assets/images/platform-gitee.jpg)
+
+- [Hugging Face](https://huggingface.co/models)
   ```An open-source platform for AI models```
 
-### 3. What Open-Source Platforms Are Available, and What Are GitHub's Advantages? (1 min)
+    ![Hugging Face model library](../../assets/images/platform-huggingface.jpg)
+
+### 3. What Open-Source Platforms Are Available, and What Are GitHub's Advantages? 
 
 Common code hosting / open-source platforms:
 
@@ -53,7 +95,7 @@ Common code hosting / open-source platforms:
 4. **Generous free tier**: A free personal account can create unlimited public repositories (private repositories also have usage limits), which is sufficient for personal learning and small teams.
 5. **The de facto standard**: The combination of `git` and GitHub has effectively become an industry-standard workflow. Job hunting, contributing to open source, and reading high-quality source code often begin with GitHub.
 
-### 4. Practice: Register a GitHub Account (10 min)
+### 4. Practice: Register a GitHub Account 
 
 Goal: Have your own GitHub account and be able to sign in and create repositories.
 
@@ -76,11 +118,11 @@ Goal: Have your own GitHub account and be able to sign in and create repositorie
 
 ---
 
-## Part Two: Searching on GitHub (How to Find Useful Repositories)
+## Section Two: Searching on GitHub (How to Find Useful Repositories)
 
 **The search bar is at the top; the largest input box is not the search bar**
 
-### 5. How to Evaluate a Repository (3 min)
+### 5. How to Evaluate a Repository 
 
 When you encounter an unfamiliar repository, you can quickly assess whether it is worth using, learning from, or contributing to based on the following dimensions:
 
@@ -97,29 +139,29 @@ When you encounter an unfamiliar repository, you can quickly assess whether it i
 | **Releases / Tags** | Releases tab | Check whether stable versions exist and how frequently new versions are released |
 
 
-### 6. How to Determine a Repository's Current Status (3 min)
+### 6. How to Determine a Repository's Current Status 
 
 "Status" mainly refers to whether a project is currently **active, maintained, or abandoned**. You can determine this by:
 
 Reviewing the content under Insights
 
-1. **Pulse: Check whether the repository has been maintained recently**
+<br></br>1. **Pulse: Check whether the repository has been maintained recently**
 
    Pulse summarizes recent Pull Requests, Issues, and commit activity in the repository. If people are still regularly submitting code and handling issues, the project is usually still actively maintained.
 
-2. **Check Contributors**
+<br></br>2. **Check Contributors**
 
    The Contributors page shows the number of participants and their contribution trends. If there are many contributors and people are still contributing recently, the project's collaboration and maintenance are relatively healthy.
 
-3. **Check commits**
+<br></br>3. **Check commits**
 
    Review the date of the most recent commit and the commit frequency to determine whether the code is still being updated. A long period without new commits may mean that the project is stable, or it may mean that maintenance has stopped; check Issues and Releases as well.
 
-4. **Check Network**
+<br></br>4. **Check Network**
 
    The Network graph shows commit relationships and branch changes between the repository and its forks. If the original repository has stopped updating but one of its forks remains actively developed, you can follow that fork instead.
 
-### 7. How to Download a Repository's Source Code (5 min)
+### 7. How to Download a Repository's Source Code 
 
 There are several common methods. Choose one based on your needs:
 
@@ -154,7 +196,7 @@ After cloning, you will have the complete repository and its version history loc
 
 If you only want an executable file or installer for a piece of software, do not download the source code. Instead, open the **Releases** page and download the release package for your platform (Windows / macOS / Linux), such as an `.exe`, `.dmg`, or `.zip` file.
 
-### 8. Some Useful Repositories (10 min)
+### 8. Some Useful Repositories 
 
 The following public repositories are very useful for learning and getting started. Search for and explore them according to your interests:
 

@@ -1,13 +1,11 @@
 ---
-title: Part2
+title: The usage of GitHub Repository
 description: Using a GitHub Repository
 ---
 
 # Using a GitHub Repository
 
 > **Author:** Zhang Junming  
-> **Date:** November 1, 2026    
-> **Status:** Draft  
 
 ---
 
