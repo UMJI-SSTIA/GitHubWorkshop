@@ -17,8 +17,8 @@ here is the logo of GitHub
 GitHub is a code hosting and collaboration platform built on the **Git** version control system. It launched in 2008 and was acquired by Microsoft in 2018. Simply put, it is a website for "storing code and writing code with others."
 
 !!! tip
-    GitHub is different form git. GitHub is a open-source platform and the repositories of it is based on git. However, GitHub is very "open". You can find some unexpected things here even they have nothing to do with coding.
-    Theoretically, you can put anything you want.
+    GitHub is different from Git. GitHub is an open-source platform whose repositories are based on Git. You can also find unexpected things on GitHub, even if they have nothing to do with coding.
+    In theory, you can upload anything you want to share.
 
 **some interesting examples**
 
@@ -120,7 +120,15 @@ Goal: Have your own GitHub account and be able to sign in and create repositorie
 
 ## Section Two: Searching on GitHub (How to Find Useful Repositories)
 
-**The search bar is at the top; the largest input box is not the search bar**
+!!! warn
+    The search bar is at the top; the largest input box is not the search bar.
+
+!!! tip
+    So what is that largest input box? It is actually Copilot AI, where you can use a variety of advanced models (provided, of course, that you pay).
+
+![GitHub search dialog with repository suggestions](../../assets/images/github-search.png)
+
+*Official GitHub Docs screenshots below illustrate the interface; dates, counts, and layout may differ from the current site.*
 
 ### 5. How to Evaluate a Repository 
 
@@ -145,6 +153,8 @@ When you encounter an unfamiliar repository, you can quickly assess whether it i
 
 Reviewing the content under Insights
 
+![Repository navigation with the Insights tab highlighted](../../assets/images/github-insights.png)
+
 <br></br>1. **Pulse: Check whether the repository has been maintained recently**
 
    Pulse summarizes recent Pull Requests, Issues, and commit activity in the repository. If people are still regularly submitting code and handling issues, the project is usually still actively maintained.
@@ -153,13 +163,19 @@ Reviewing the content under Insights
 
    The Contributors page shows the number of participants and their contribution trends. If there are many contributors and people are still contributing recently, the project's collaboration and maintenance are relatively healthy.
 
+![Contribution activity over time with a selected date range](../../assets/images/github-contributors.png)
+
 <br></br>3. **Check commits**
 
    Review the date of the most recent commit and the commit frequency to determine whether the code is still being updated. A long period without new commits may mean that the project is stable, or it may mean that maintenance has stopped; check Issues and Releases as well.
 
+![Latest commit time and the link to commit history in GitHub’s official example repository](../../assets/images/github-commits.png)
+
 <br></br>4. **Check Network**
 
    The Network graph shows commit relationships and branch changes between the repository and its forks. If the original repository has stopped updating but one of its forks remains actively developed, you can follow that fork instead.
+
+![Network graph showing branch and fork relationships](../../assets/images/github-network.png)
 
 ### 7. How to Download a Repository's Source Code 
 
@@ -167,9 +183,16 @@ There are several common methods. Choose one based on your needs:
 
 **Method 1: Download a ZIP file directly (the simplest option, suitable if you only want to view the code)**
 
+!!! tip
+    This is suitable when you only want to use a repository's functionality without looking into its source code.
+
 1. Open the repository page and click the green **Code** button.
 2. Select **Download ZIP** from the drop-down menu.
 3. Extract the archive to obtain the complete source code from the repository's current default branch.
+
+![Repository Code button highlighted](../../assets/images/github-code-download.png)
+
+![Open Code menu showing the HTTPS clone URL and Download ZIP option](../../assets/images/github-clone-https.png)
 
 > Disadvantage: It does not include Git history and cannot pull future updates, so it is suitable for obtaining the code only once.
 
@@ -195,6 +218,8 @@ After cloning, you will have the complete repository and its version history loc
 **Method 3: Download a Release (suitable for software that can be run directly)**
 
 If you only want an executable file or installer for a piece of software, do not download the source code. Instead, open the **Releases** page and download the release package for your platform (Windows / macOS / Linux), such as an `.exe`, `.dmg`, or `.zip` file.
+
+![Repository sidebar showing the Releases link](../../assets/images/github-releases.png)
 
 ### 8. Some Useful Repositories 
 
@@ -222,3 +247,6 @@ The following public repositories are very useful for learning and getting start
 1. Search for a topic that interests you
 2. Find a well-maintained repository
 3. Download some useful code
+
+
+*Additional screenshots: [GitHub Docs](https://docs.github.com), used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). [Image sources](../../assets/images/part1-image-sources.md).*
