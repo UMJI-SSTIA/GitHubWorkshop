@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Split the workshop drafts (`Demo/Part1.md`, `Demo/Part2.md`) into per-topic pages under `github-introduction/` and `repo-management/` in both English and Chinese (including a new guide on GitHub Issues), and reorganized the navigation accordingly.
+
 ## [0.1.1] - 2026-10-29
 
 ### Changed

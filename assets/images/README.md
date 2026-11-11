@@ -16,7 +16,7 @@
 ## 在文档中引用
 
 这些图片按要求存放于项目根目录 `assets/images/`。
-从 `docs/en/Demo/Part1.md` 在本地 Markdown 预览中引用，例如：
+从 `docs/en/github-introduction/what-is-github.md` 等页面在本地 Markdown 预览中引用，例如：
 
 ```markdown
 ![程序员做饭指南](../../../assets/images/github-howtocook.jpg)
