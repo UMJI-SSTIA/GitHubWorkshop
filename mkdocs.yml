@@ -22,7 +22,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: blue
       accent: indigo
       toggle:
         icon: material/brightness-7
@@ -31,8 +31,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: cyan
-      accent: cyan
+      primary: blue
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -101,15 +101,32 @@ plugins:
           build: true
           nav_translations:
             Home: 首页
-            Worksheets: GitHub Workshop
-            A brief introduction of GitHub: 关于GitHub的简介
-            The usage of GitHub Repository: 如何使用GitHub
+            Overview: 概述
+            A brief introduction of GitHub: GitHub简介
+            The usage of GitHub Repository: 仓库管理
 
   - minify:
       minify_html: true
 
 nav:
   - Home: index.md
-  - Worksheets:
-      - A brief introduction of GitHub: Demo/Part1.md
-      - The usage of GitHub Repository: Demo/Part2.md
+
+  - A brief introduction of GitHub:
+      - Overview: github-introduction/index.md
+      - github-introduction/what-is-github.md
+      - github-introduction/open-source-platforms.md
+      - github-introduction/register-account.md
+      - github-introduction/searching-on-github.md
+      - github-introduction/repository-status.md
+      - github-introduction/download-code.md
+      - github-introduction/useful-repositories.md
+  - The usage of GitHub Repository:
+      - Overview: repo-management/index.md
+      - repo-management/create-repository.md
+      - repo-management/license.md
+      - repo-management/issues.md
+      - repo-management/fork.md
+      - repo-management/contribute.md
+      - repo-management/edit-online.md
+      - repo-management/readme.md
+      - repo-management/github-pages.md
