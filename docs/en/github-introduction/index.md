@@ -8,7 +8,7 @@ discussions: true
 
 <figure markdown="span">
   ![GitHub 标志](../../assets/images/GitHub-Mark.png){ width="300" }
-  <figcaption> GitHub 的Logo </figcaption>
+  <figcaption> GitHub Logo </figcaption>
 </figure>
 
 

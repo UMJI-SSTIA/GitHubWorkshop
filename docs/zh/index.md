@@ -7,7 +7,7 @@ description: SSTIA主办的GitHub Workshop
 
 <div markdown="1" style="text-align: center; margin: 2rem 0;">
 
-![GitHub 标志](../assets/images/GitHub-Mark.png){ style="width: 160px; max-width: 40%;" }
+![GitHub 标志](../assets/images/GitHub_Lockup_Black.svg){ style="width: 360px; max-width: 80%;" }
 
 </div>
 
