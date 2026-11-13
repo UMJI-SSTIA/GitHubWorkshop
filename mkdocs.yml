@@ -104,6 +104,7 @@ plugins:
             Overview: 概述
             A brief introduction of GitHub: GitHub简介
             The usage of GitHub Repository: 仓库管理
+            Miscellaneous: 杂项
 
   - minify:
       minify_html: true
@@ -130,3 +131,6 @@ nav:
       - repo-management/edit-online.md
       - repo-management/readme.md
       - repo-management/github-pages.md
+  - Miscellaneous:
+      - miscellaneous/documents.md
+      - miscellaneous/fancy-videos.md
