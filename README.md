@@ -11,7 +11,7 @@
 ![Static Badge](https://img.shields.io/badge/GitHub_Workshop-purple?logo=github)
 ![Static Badge](https://img.shields.io/badge/lisence-MIT-green)
 
-# **A GREAT WAY TO LEAD YOU INTO GITHUB !**
+# **A GREAT WAY GET INTO GITHUB !**
 
 
 This beginner-friendly GitHub workshop was created by SSTIA. It has two parts: first, you will explore GitHub and the open-source community while learning how to find, evaluate, and download repositories; then, you will create and maintain a repository and experience the complete open-source collaboration workflow.
@@ -55,6 +55,6 @@ Everyone contribute or attend to this workshop
 
 <div markdown="1" style="text-align: center; margin: 2rem 0;">
 
-![SSTIA logo](/docs//assets/favicon.svg)
+![SSTIA logo](/docs//assets/favicon.svg){ style="width: 180px; max-width: 40%;" }
 
 </div>
