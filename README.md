@@ -55,6 +55,6 @@ Everyone contribute or attend to this workshop
 
 <div markdown="1" style="text-align: center; margin: 2rem 0;">
 
-![SSTIA logo](/docs//assets/favicon.svg){ style="width: 180px; max-width: 40%;" }
+![SSTIA logo](/docs//assets/favicon.svg)
 
 </div>
