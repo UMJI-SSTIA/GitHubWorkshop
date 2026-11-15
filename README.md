@@ -7,6 +7,13 @@
 
 </div>
 
+![Static Badge](https://img.shields.io/badge/SJTU_SSTIA-blue)
+![Static Badge](https://img.shields.io/badge/GitHub_Workshop-purple?logo=github)
+![Static Badge](https://img.shields.io/badge/lisence-MIT-green)
+
+# **A GREAT WAY TO LEAD YOU INTO GITHUB !**
+
+
 This beginner-friendly GitHub workshop was created by SSTIA. It has two parts: first, you will explore GitHub and the open-source community while learning how to find, evaluate, and download repositories; then, you will create and maintain a repository and experience the complete open-source collaboration workflow.
 
 By the end of the workshop, you will be able to:
@@ -37,7 +44,7 @@ https://umji-sstia.github.io/GitHubWorkshop/
 
 license
 ```
-this repository is to give you some insights into how to use GitHub basically, in that case, we don't have a lisence for this repository.
+this repository uses MIT license, so you can use it for commercial use(though I don't think you'll do so)
 ```
 
 Thanks
