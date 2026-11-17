@@ -8,8 +8,10 @@ discussions: true
 
 <figure markdown="span">
   ![GitHub 标志](../../assets/images/GitHub-Mark.png){ width="300" }
-  <figcaption> GitHub Logo: Octocat </figcaption>
+  <figcaption> GitHub Logo: Octocat（章鱼猫） </figcaption>
 </figure>
+
+各种各样的章鱼猫：https://link.wtturl.cn/?target=https%3A%2F%2Foctodex.github.com%2F&scene=im&aid=582478&lang=zh
 
 GitHub 是全球最大的代码托管与协作平台，也是大多数开发者进入开源世界的入口。在本部分中，你将了解 GitHub 与开源平台是什么，注册自己的账号，并学会如何在 GitHub 上搜索、判断和下载仓库。
 
