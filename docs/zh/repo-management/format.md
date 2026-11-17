@@ -1,222 +1,255 @@
 ---
 title: 格式模板
-description: 可直接复制的 README、CONTRIBUTING、CHANGELOG、SECURITY 格式模板，以及 Commit Catcher 小游戏的完整源码。
+description: 按 workshop 讲稿整理的 README、CONTRIBUTING、LICENSE、Issue、Pull Request 与 index.html 模板，另附 CHANGELOG 模板和小游戏完整源码。
 discussions: true
 ---
 
 # 格式模板
 
-本页收集了本 workshop 使用的仓库级 Markdown 模板，以及 **Commit Catcher（提交捕手）** 小游戏的完整源码。可以把下面的代码块直接复制到自己的仓库中，再按项目情况修改。
+本页按照 workshop 讲稿第 3–6 章整理，收录创建和维护仓库时最常用的模板，并补充一个通用的 CHANGELOG 模板。把代码块复制到对应路径，替换 `<...>` 占位符即可使用。
 
-!!! tip "使用说明"
-    发布前请把项目名和占位符替换成自己的内容。GitHub 会自动在仓库首页展示根目录下的 `README.md`，并在对应位置展示 `CONTRIBUTING.md`、`CHANGELOG.md` 和 `SECURITY.md`。下面的模板正文为英文，可以按需翻译。
+## 推荐仓库结构
 
-## README.md 模板
+讲稿附录 C 建议的演示仓库如下：
+
+```text
+github-workshop-demo/
+├── README.md
+├── LICENSE                   # MIT
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── contributors.md           # 练习用表格
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    │   └── bug_report.md
+    └── PULL_REQUEST_TEMPLATE.md
+```
+
+`.github/` 目录还可以放 `feature_request.md` 和 `workflows/`（CI 配置）。
+
+## README.md
+
+一个好的 README 回答四个问题：这是什么、能干什么、怎么装、怎么用。
 
 ````markdown
-# GitHub Workshop
+# 项目名
 
-<div markdown="1" style="text-align: center; margin: 2rem 0;">
+> 一句话说明这个项目解决什么问题。
 
-![GitHub logo](/docs/assets/images/GitHub_Lockup_Black.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-</div>
+## 特性
 
-![Static Badge](https://img.shields.io/badge/SJTU_SSTIA-blue)
-![Static Badge](https://img.shields.io/badge/GitHub_Workshop-purple?logo=github)
-![Static Badge](https://img.shields.io/badge/license-MIT-green)
+- 特性一
+- 特性二
 
-## A great way to get into GitHub
+## 安装
 
-This beginner-friendly GitHub workshop was created by SSTIA. It has two parts: first, you will explore GitHub and the open-source community while learning how to find, evaluate, and download repositories; then, you will create and maintain a repository and experience the complete open-source collaboration workflow.
-
-By the end of the workshop, you will be able to:
-
-- Find open-source projects and decide whether they are suitable for use;
-- Create repositories and use Git to commit and push code;
-- Collaborate through forks, issues, and pull requests;
-- Write a README, choose an open-source license, and publish a website with GitHub Pages.
-
-## How this repository helps you understand the workshop
-
-- The worksheet is published on the workshop website, so you can read it when you cannot catch up with the lecture or want to work ahead.
-- Each part of the worksheet has a discussion board, so you can ask questions there and we will be glad to answer them.
-- The repository includes links and pictures that help you understand GitHub.
-- Other unexpected surprises are waiting for you to explore. :)
-
-## Get started
-
-```text
-Open the deployed website and follow the instructions there, or follow the lecture.
+```bash
+git clone https://github.com/<用户名>/<仓库名>.git
+cd <仓库名>
+npm install
 ```
 
-## The worksheet link
+## 快速开始
 
-```text
-https://umji-sstia.github.io/GitHubWorkshop/
+```bash
+npm start
 ```
 
-## License
+## 使用示例
 
-```text
-This repository uses the MIT license, so you can use it for commercial purposes (though we don't think you will).
+```python
+from mylib import hello
+hello()
 ```
 
-## Thanks
+## 贡献
 
-```text
-SJTU GC College SSTIA
-Everyone who contributed to or attended this workshop
-```
+欢迎提交 Issue 和 Pull Request，请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-<div markdown="1" style="text-align: center; margin: 2rem 0;">
+## 许可证
 
-![SSTIA logo](/docs/assets/favicon.svg)
-
-</div>
+本项目采用 [MIT](LICENSE) 许可证。
 ````
 
-## CONTRIBUTING.md 模板
+## CONTRIBUTING.md
+
+`LICENSE` 回答“你能不能改”，`CONTRIBUTING.md` 回答“你该怎么改”。
 
 ````markdown
-# Contributing
+# 贡献指南
 
-The repository is a documentation template, so most contributions are content or configuration changes. All contributions are welcome: bug reports, new teaching pages, translations, and configuration improvements.
+感谢你愿意贡献！
 
-## Getting started
+## 开发环境
 
-1. Open an issue first to describe the change. This avoids work on a design the maintainers would not accept.
-2. Fork the repository and create a feature branch from `main`.
-3. Set up a local preview:
+- Node.js >= 20
+- 安装依赖：`npm install`
+- 运行测试：`npm test`
 
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate        # Windows: .venv\Scripts\activate
-    pip install -r requirements.txt
-    mkdocs serve
-    ```
+## 分支与提交
 
-4. Make the change, then verify the build:
+- 分支命名：`feat/xxx`、`fix/xxx`、`docs/xxx`
+- 提交信息遵循 Conventional Commits，例如 `fix: 修复登录超时`
+- 提交前请确保 `npm test` 通过
 
-    ```bash
-    mkdocs build --strict
-    ```
+## 提交 PR
 
-The health check workflow runs the same command on every pull request; broken links or unresolved files fail CI.
+1. Fork 本仓库并 clone 到本地
+2. 从最新的 `main` 新建分支
+3. 修改代码并提交
+4. 推送分支，创建 PR，并关联相关 Issue
 
-## Content conventions
+## 行为准则
 
-- **Bilingual pages**: every page exists twice — `docs/en/<path>.md` (default language) and `docs/zh/<path>.md` (translation) — with the same relative path. If the Chinese file is missing, the site falls back to the English content; merged changes are expected to include both versions.
-- **Navigation**: new pages are registered in `nav` in `mkdocs.yml`, and their Chinese titles are added to `nav_translations` under the `zh` language entry. Pages not listed in `nav` are not built.
-- **Assets**: shared files go in `docs/assets/` — images in `docs/assets/images/`, videos in `docs/assets/videos/`. Everything under `docs/` is published, so do not commit private files there.
-- **Frontmatter**: each page carries a `title` and a `description`. Pages with a comment thread add `discussions: true`.
-- **Style**: the documentation is written in a neutral, official tone. Avoid decorative emoji and casual phrasing.
-
-## Commit messages
-
-Follow the convention used in the repository history:
-
-- `feat:` — new functionality or pages
-- `fix:` — bug fixes
-- `chore:` — maintenance and configuration
-- `deploy:` — site deployments (generated)
-
-## Pull requests
-
-- Target the `main` branch.
-- Describe the change and, for content changes, confirm that both language versions were updated.
-- Keep the strict build warning-free: the build log should not contain warnings about unresolved links or missing translations.
+参与本项目即表示同意遵守 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
 ````
 
-## CHANGELOG.md 模板
+## LICENSE
+
+不要手写许可证正文，用 GitHub 的模板。常见许可证怎么选：
+
+| 许可证 | 特点 | 适合 |
+| --- | --- | --- |
+| MIT | 最短最宽松，保留版权声明即可 | 个人项目、库、希望被广泛使用 |
+| Apache-2.0 | MIT + 明确的专利授权 | 企业项目、涉及专利风险 |
+| GPL-3.0 | 衍生作品必须同样开源（传染性） | 希望强制开源 |
+| BSD-3-Clause | 类似 MIT，多一条禁止用作者名义背书 | 学术、基础设施 |
+| CC0 / Unlicense | 放弃版权，进入公共领域 | 示例代码、数据集 |
+
+给已有仓库添加 license：
+
+1. 仓库页 → **Add file** → **Create new file**
+2. 文件名输入 `LICENSE`
+3. 右侧会出现 **Choose a license template**
+4. 选 MIT → 填年份和作者 → **Review and submit**
+
+在 README 里写一句“本项目采用 MIT 许可证”，并链接到 `LICENSE` 文件。多人贡献后再换 license，理论上需要所有贡献者同意。
+
+## index.html
+
+`index.html` 是网页项目的默认入口文件；开启 GitHub Pages 后，仓库会变成一个可访问的网站。最小示例：
+
+````html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>My GitHub Page</title>
+</head>
+<body>
+  <h1>Hello GitHub Pages</h1>
+</body>
+</html>
+````
+
+## .github/ISSUE_TEMPLATE/bug_report.md
 
 ````markdown
-# Changelog
+---
+name: Bug report
+about: 报告一个问题
+title: "[Bug] "
+labels: bug
+---
 
-All notable changes to this project are documented in this file.
+## 描述
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## 复现步骤
+
+1.
+2.
+3.
+
+## 期望结果
+
+## 实际结果
+
+## 环境
+
+- OS:
+- 版本:
+- 浏览器/运行时:
+
+## 日志 / 截图
+````
+
+## .github/PULL_REQUEST_TEMPLATE.md
+
+````markdown
+## 这个 PR 做了什么
+
+## 关联 Issue
+
+Closes #
+
+## 测试方式
+
+## 检查清单
+
+- [ ] 已本地测试
+- [ ] 已更新文档
+- [ ] 提交信息符合规范
+- [ ] 没有夹带无关改动
+````
+
+## contributors.md
+
+````markdown
+# 贡献者
+
+| 姓名 | GitHub | 一句话 |
+|------|--------|--------|
+| 讲师 | @<讲师用户名> | 示例行 |
+````
+
+## Markdown 速查
+
+- 标题：`# 一级`、`## 二级`
+- 粗体 / 斜体：`**粗体**`、`*斜体*`
+- 列表：`- 项目`
+- 链接：`[文字](https://...)`
+- 图片：`![说明](docs/screenshot.png)`
+- 行内代码：`` `code` ``
+- 代码块：三个反引号 + 语言名
+- 引用：`> 引用`
+- 表格：`| A | B |`
+- 任务列表：`- [x] 已完成`
+
+## CHANGELOG.md
+
+````markdown
+# 更新日志
+
+所有值得记录的改动都写在这里。
+
+格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
 ## [Unreleased]
 
-### Changed
+### Added
 
-- Split the workshop drafts (`Demo/Part1.md`, `Demo/Part2.md`) into per-topic pages under `github-introduction/` and `repo-management/` in both English and Chinese (including a new guide on GitHub Issues), and reorganized the navigation accordingly.
-
-## [0.1.1] - 2026-10-29
+- 新增的功能。
 
 ### Changed
 
-- Bump `mkdocs-material` from `9.7.0` to `9.8.0`.
+- 对现有功能的调整。
 
-### Security
+### Fixed
 
-- Update `mkdocs-material` to 9.8.0 to include fixes for known vulnerabilities, including the `search.suggest` DOM XSS issue (CVE-2026-73295) and dependency-level CVEs in Jinja2, Markdown, Pygments, PyMdown Extensions, Requests, Pillow, CairoSVG, and GitPython.
+- 修复的问题。
 
-## [0.1.0] - 2026-10-28
-
-Initial release.
+## [1.0.0] - YYYY-MM-DD
 
 ### Added
 
-- MkDocs and Material for MkDocs setup with pinned Python dependencies (`requirements.txt`)
-- GitHub Actions automation: build and deployment to GitHub Pages on every push to `main` (`publish_site.yaml`), and a `mkdocs build --strict` health check on pull requests (`health_check.yaml`)
-- Bilingual site structure (English / 简体中文) via mkdocs-static-i18n: per-language navigation translations (`nav_translations`), header language switcher, Chinese UI strings, and fallback to the default language for untranslated pages
-- Per-page discussion board powered by giscus and GitHub Discussions, enabled by frontmatter and synchronized with the site's light/dark theme
-- Media support: image embedding with sizing and captions, video embedding via the mkdocs-video plugin, with bundled demo assets (`image_demo.png`, `video_demo.mp4`)
-- Markdown extensions: tables, task lists, content tabs, admonitions, emoji, LaTeX math, Mermaid diagrams, and raw HTML
-- Theme configuration: light/dark color palettes, Material color schemes, logo and favicon
-- Build hooks: `sitemap.xml` copied into language subdirectories after each build
-- Complete bilingual documentation: introduction, deployment, repository structure, page authoring, Markdown reference, theming, media, internationalization, discussion board, and customization
-- Embedded Snake game demo illustrating interactive HTML/CSS/JS widgets
-- Project files: README, CONTRIBUTING, SECURITY
-- MIT license
-
-[Unreleased]: https://github.com/CedricHaskell/WorkshopTemplate/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/CedricHaskell/WorkshopTemplate/releases/tag/v0.1.0
+- 第一个正式版本。
 ````
 
-## SECURITY.md 模板
+## 小游戏完整源码：`index.html`
 
-````markdown
-# Security
-
-## Reporting a vulnerability
-
-To report a security issue in this template, use the GitHub **Report a vulnerability** flow (Security tab → Advisories) on this repository. DON'T open an issue and make it visible to everyone.
-
-Include a description of the issue, the affected files, and — if possible — a minimal reproduction. Do not include sensitive data in public reports.
-
-## Scope
-
-The template consists of static configuration and content; it contains no server-side code. In scope:
-
-- `mkdocs.yml` and the build configuration
-- `docs/scripts/hooks.py` and the templates under `docs/overrides/`
-- `.github/workflows/`
-- Markdown content that embeds executable JavaScript (e.g. the game demo)
-
-Out of scope: GitHub Pages infrastructure, GitHub Actions runners, and third-party projects (MkDocs, Material for MkDocs, giscus, MathJax, Mermaid, and the plugins listed in `requirements.txt`). Vulnerabilities in those projects should be reported to their maintainers.
-
-## Guidance for adopters
-
-Sites built from this template inherit the following properties:
-
-- The published site is static HTML/CSS/JS and exposes no server-side attack surface.
-- Comments are served by a third-party iframe from giscus.app and stored as GitHub Discussions in the configured repository.
-- Embedded widgets execute in visitors' browsers. Do not embed secrets, API keys, or other credentials in Markdown pages or in `docs/assets/` — everything under `docs/` is published.
-- Python dependencies are pinned in `requirements.txt`. Enabling Dependabot version updates is recommended to receive security fixes.
-- The deploy workflow uses the built-in `GITHUB_TOKEN`, scoped to the repository by `permissions: contents: write`. Keep the repository's Actions setting at read/write as documented in the deployment guide.
-- The discussion board (giscus) requires a public repository. Do not enable it for private or internal-only workshops.
-
-## Supported versions
-
-Only the latest commit on the `main` branch is supported. There is no backporting or long-term support policy.
-````
-
-## 小游戏源码：`index.html`
-
-小游戏是一个单文件 HTML，CSS 和 JavaScript 都内联在文件中。把下面的代码保存为 `index.html`，用浏览器打开即可运行；也可以按[用 GitHub Pages 发布网页](github-pages.md)中的步骤发布。
+下面的 `index.html` 是一个可直接运行的完整小游戏（Commit Catcher）。保存后双击打开，或按[用 GitHub Pages 发布网页](github-pages.md)中的步骤发布。
 
 ````html
 <!DOCTYPE html>

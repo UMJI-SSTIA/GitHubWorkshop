@@ -1,132 +1,221 @@
 ---
 title: Format Templates
-description: Copy-ready Markdown templates for README, CONTRIBUTING, CHANGELOG, and SECURITY, plus the complete source of the Commit Catcher mini-game.
+description: README, CONTRIBUTING, LICENSE, Issue, Pull Request, and index.html templates from the workshop script, plus a CHANGELOG template and the full mini-game source.
 discussions: true
 ---
 
 # Format Templates
 
-This page collects the repository-level Markdown templates used by this workshop, together with the complete source of the **Commit Catcher** mini-game. Copy any block into your own repository and adapt it to your project.
+This page follows chapters 3–6 of the workshop script and collects the templates used when creating and maintaining a repository, with an additional CHANGELOG template. Copy each block to the indicated path and replace the `<...>` placeholders.
 
-!!! tip "How to use these templates"
-    Replace project names and placeholders with your own. GitHub automatically displays `README.md`, `CONTRIBUTING.md`, `CHANGELOG.md`, and `SECURITY.md` from the repository root.
+## Recommended repository structure
+
+The script's appendix C recommends this demo repository:
+
+```text
+github-workshop-demo/
+├── README.md
+├── LICENSE                   # MIT
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── contributors.md           # practice table
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    │   └── bug_report.md
+    └── PULL_REQUEST_TEMPLATE.md
+```
+
+The `.github/` directory can also contain `feature_request.md` and `workflows/` for CI.
 
 ## README.md
 
+A good README answers four questions: what is this, what can it do, how do I install it, and how do I use it.
+
 ````markdown
-# GitHub Workshop
+# Project name
 
-<div markdown="1" style="text-align: center; margin: 2rem 0;">
+> One sentence explaining what problem this project solves.
 
-![GitHub logo](/docs/assets/images/GitHub_Lockup_Black.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-</div>
+## Features
 
-![Static Badge](https://img.shields.io/badge/SJTU_SSTIA-blue)
-![Static Badge](https://img.shields.io/badge/GitHub_Workshop-purple?logo=github)
-![Static Badge](https://img.shields.io/badge/license-MIT-green)
+- Feature one
+- Feature two
 
-## A great way to get into GitHub
+## Installation
 
-This beginner-friendly GitHub workshop was created by SSTIA. It has two parts: first, you will explore GitHub and the open-source community while learning how to find, evaluate, and download repositories; then, you will create and maintain a repository and experience the complete open-source collaboration workflow.
-
-By the end of the workshop, you will be able to:
-
-- Find open-source projects and decide whether they are suitable for use;
-- Create repositories and use Git to commit and push code;
-- Collaborate through forks, issues, and pull requests;
-- Write a README, choose an open-source license, and publish a website with GitHub Pages.
-
-## How this repository helps you understand the workshop
-
-- The worksheet is published on the workshop website, so you can read it when you cannot catch up with the lecture or want to work ahead.
-- Each part of the worksheet has a discussion board, so you can ask questions there and we will be glad to answer them.
-- The repository includes links and pictures that help you understand GitHub.
-- Other unexpected surprises are waiting for you to explore. :)
-
-## Get started
-
-```text
-Open the deployed website and follow the instructions there, or follow the lecture.
+```bash
+git clone https://github.com/<username>/<repository>.git
+cd <repository>
+npm install
 ```
 
-## The worksheet link
+## Quick start
 
-```text
-https://umji-sstia.github.io/GitHubWorkshop/
+```bash
+npm start
 ```
+
+## Usage example
+
+```python
+from mylib import hello
+hello()
+```
+
+## Contributing
+
+Issues and pull requests are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
 ## License
 
-```text
-This repository uses the MIT license, so you can use it for commercial purposes (though we don't think you will).
-```
-
-## Thanks
-
-```text
-SJTU GC College SSTIA
-Everyone who contributed to or attended this workshop
-```
-
-<div markdown="1" style="text-align: center; margin: 2rem 0;">
-
-![SSTIA logo](/docs/assets/favicon.svg)
-
-</div>
+This project is licensed under the [MIT](LICENSE) license.
 ````
 
 ## CONTRIBUTING.md
 
+`LICENSE` answers "may I change this?"; `CONTRIBUTING.md` answers "how should I change it?".
+
 ````markdown
 # Contributing
 
-The repository is a documentation template, so most contributions are content or configuration changes. All contributions are welcome: bug reports, new teaching pages, translations, and configuration improvements.
+Thank you for contributing!
 
-## Getting started
+## Development environment
 
-1. Open an issue first to describe the change. This avoids work on a design the maintainers would not accept.
-2. Fork the repository and create a feature branch from `main`.
-3. Set up a local preview:
+- Node.js >= 20
+- Install dependencies: `npm install`
+- Run tests: `npm test`
 
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate        # Windows: .venv\Scripts\activate
-    pip install -r requirements.txt
-    mkdocs serve
-    ```
+## Branches and commits
 
-4. Make the change, then verify the build:
+- Branch names: `feat/xxx`, `fix/xxx`, `docs/xxx`
+- Follow Conventional Commits, e.g. `fix: fix login timeout`
+- Make sure `npm test` passes before committing
 
-    ```bash
-    mkdocs build --strict
-    ```
+## Submitting a pull request
 
-The health check workflow runs the same command on every pull request; broken links or unresolved files fail CI.
+1. Fork this repository and clone it locally
+2. Create a branch from the latest `main`
+3. Make your changes and commit them
+4. Push the branch, open a pull request, and link the related issue
 
-## Content conventions
+## Code of conduct
 
-- **Bilingual pages**: every page exists twice — `docs/en/<path>.md` (default language) and `docs/zh/<path>.md` (translation) — with the same relative path. If the Chinese file is missing, the site falls back to the English content; merged changes are expected to include both versions.
-- **Navigation**: new pages are registered in `nav` in `mkdocs.yml`, and their Chinese titles are added to `nav_translations` under the `zh` language entry. Pages not listed in `nav` are not built.
-- **Assets**: shared files go in `docs/assets/` — images in `docs/assets/images/`, videos in `docs/assets/videos/`. Everything under `docs/` is published, so do not commit private files there.
-- **Frontmatter**: each page carries a `title` and a `description`. Pages with a comment thread add `discussions: true`.
-- **Style**: the documentation is written in a neutral, official tone. Avoid decorative emoji and casual phrasing.
-
-## Commit messages
-
-Follow the convention used in the repository history:
-
-- `feat:` — new functionality or pages
-- `fix:` — bug fixes
-- `chore:` — maintenance and configuration
-- `deploy:` — site deployments (generated)
-
-## Pull requests
-
-- Target the `main` branch.
-- Describe the change and, for content changes, confirm that both language versions were updated.
-- Keep the strict build warning-free: the build log should not contain warnings about unresolved links or missing translations.
+By participating in this project, you agree to follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 ````
+
+## LICENSE
+
+Do not hand-write the license text; use GitHub's license template. Choosing a license:
+
+| License | Characteristics | Best for |
+| --- | --- | --- |
+| MIT | Shortest and most permissive; keep the copyright notice | Personal projects, libraries, broad reuse |
+| Apache-2.0 | MIT plus an explicit patent grant | Company projects with patent risk |
+| GPL-3.0 | Derivative works must stay open source (copyleft) | Projects that must remain open source |
+| BSD-3-Clause | Like MIT, plus a clause forbidding endorsement | Academia, infrastructure |
+| CC0 / Unlicense | Waive copyright and release into the public domain | Example code, datasets |
+
+Adding a license to an existing repository:
+
+1. Repository page → **Add file** → **Create new file**
+2. Enter `LICENSE` as the file name
+3. On the right, choose **Choose a license template**
+4. Select MIT → fill in the year and author → **Review and submit**
+
+Add a line to the README: "This project uses the MIT license", and link to the `LICENSE` file. Changing the license after others have contributed requires all contributors' agreement.
+
+## index.html
+
+`index.html` is the default entry point for a web project; with GitHub Pages enabled, the repository becomes a website. Minimal example:
+
+````html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>My GitHub Page</title>
+</head>
+<body>
+  <h1>Hello GitHub Pages</h1>
+</body>
+</html>
+````
+
+## .github/ISSUE_TEMPLATE/bug_report.md
+
+````markdown
+---
+name: Bug report
+about: Report a problem
+title: "[Bug] "
+labels: bug
+---
+
+## Description
+
+## Steps to reproduce
+
+1.
+2.
+3.
+
+## Expected behavior
+
+## Actual behavior
+
+## Environment
+
+- OS:
+- Version:
+- Browser/runtime:
+
+## Logs / screenshots
+````
+
+## .github/PULL_REQUEST_TEMPLATE.md
+
+````markdown
+## What does this PR do?
+
+## Related issue
+
+Closes #
+
+## How was it tested?
+
+## Checklist
+
+- [ ] Tested locally
+- [ ] Documentation updated
+- [ ] Commit messages follow the convention
+- [ ] No unrelated changes included
+````
+
+## contributors.md
+
+````markdown
+# Contributors
+
+| Name | GitHub | One-line note |
+|------|--------|---------------|
+| Instructor | @<instructor-username> | Example row |
+````
+
+## Markdown quick reference
+
+- Headings: `# Level 1`, `## Level 2`
+- Bold / italic: `**bold**`, `*italic*`
+- List: `- item`
+- Link: `[text](https://...)`
+- Image: `![description](docs/screenshot.png)`
+- Inline code: `` `code` ``
+- Code block: three backticks + language name
+- Quote: `> quote`
+- Table: `| A | B |`
+- Task list: `- [x] done`
 
 ## CHANGELOG.md
 
@@ -139,84 +228,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-### Changed
+### Added
 
-- Split the workshop drafts (`Demo/Part1.md`, `Demo/Part2.md`) into per-topic pages under `github-introduction/` and `repo-management/` in both English and Chinese (including a new guide on GitHub Issues), and reorganized the navigation accordingly.
-
-## [0.1.1] - 2026-10-29
+- New features.
 
 ### Changed
 
-- Bump `mkdocs-material` from `9.7.0` to `9.8.0`.
+- Changes to existing functionality.
 
-### Security
+### Fixed
 
-- Update `mkdocs-material` to 9.8.0 to include fixes for known vulnerabilities, including the `search.suggest` DOM XSS issue (CVE-2026-73295) and dependency-level CVEs in Jinja2, Markdown, Pygments, PyMdown Extensions, Requests, Pillow, CairoSVG, and GitPython.
+- Bug fixes.
 
-## [0.1.0] - 2026-10-28
-
-Initial release.
+## [1.0.0] - YYYY-MM-DD
 
 ### Added
 
-- MkDocs and Material for MkDocs setup with pinned Python dependencies (`requirements.txt`)
-- GitHub Actions automation: build and deployment to GitHub Pages on every push to `main` (`publish_site.yaml`), and a `mkdocs build --strict` health check on pull requests (`health_check.yaml`)
-- Bilingual site structure (English / 简体中文) via mkdocs-static-i18n: per-language navigation translations (`nav_translations`), header language switcher, Chinese UI strings, and fallback to the default language for untranslated pages
-- Per-page discussion board powered by giscus and GitHub Discussions, enabled by frontmatter and synchronized with the site's light/dark theme
-- Media support: image embedding with sizing and captions, video embedding via the mkdocs-video plugin, with bundled demo assets (`image_demo.png`, `video_demo.mp4`)
-- Markdown extensions: tables, task lists, content tabs, admonitions, emoji, LaTeX math, Mermaid diagrams, and raw HTML
-- Theme configuration: light/dark color palettes, Material color schemes, logo and favicon
-- Build hooks: `sitemap.xml` copied into language subdirectories after each build
-- Complete bilingual documentation: introduction, deployment, repository structure, page authoring, Markdown reference, theming, media, internationalization, discussion board, and customization
-- Embedded Snake game demo illustrating interactive HTML/CSS/JS widgets
-- Project files: README, CONTRIBUTING, SECURITY
-- MIT license
-
-[Unreleased]: https://github.com/CedricHaskell/WorkshopTemplate/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/CedricHaskell/WorkshopTemplate/releases/tag/v0.1.0
-````
-
-## SECURITY.md
-
-````markdown
-# Security
-
-## Reporting a vulnerability
-
-To report a security issue in this template, use the GitHub **Report a vulnerability** flow (Security tab → Advisories) on this repository. DON'T open an issue and make it visible to everyone.
-
-Include a description of the issue, the affected files, and — if possible — a minimal reproduction. Do not include sensitive data in public reports.
-
-## Scope
-
-The template consists of static configuration and content; it contains no server-side code. In scope:
-
-- `mkdocs.yml` and the build configuration
-- `docs/scripts/hooks.py` and the templates under `docs/overrides/`
-- `.github/workflows/`
-- Markdown content that embeds executable JavaScript (e.g. the game demo)
-
-Out of scope: GitHub Pages infrastructure, GitHub Actions runners, and third-party projects (MkDocs, Material for MkDocs, giscus, MathJax, Mermaid, and the plugins listed in `requirements.txt`). Vulnerabilities in those projects should be reported to their maintainers.
-
-## Guidance for adopters
-
-Sites built from this template inherit the following properties:
-
-- The published site is static HTML/CSS/JS and exposes no server-side attack surface.
-- Comments are served by a third-party iframe from giscus.app and stored as GitHub Discussions in the configured repository.
-- Embedded widgets execute in visitors' browsers. Do not embed secrets, API keys, or other credentials in Markdown pages or in `docs/assets/` — everything under `docs/` is published.
-- Python dependencies are pinned in `requirements.txt`. Enabling Dependabot version updates is recommended to receive security fixes.
-- The deploy workflow uses the built-in `GITHUB_TOKEN`, scoped to the repository by `permissions: contents: write`. Keep the repository's Actions setting at read/write as documented in the deployment guide.
-- The discussion board (giscus) requires a public repository. Do not enable it for private or internal-only workshops.
-
-## Supported versions
-
-Only the latest commit on the `main` branch is supported. There is no backporting or long-term support policy.
+- First release.
 ````
 
 ## Mini-game source: `index.html`
 
-The game is a single HTML file with inline CSS and JavaScript. Save the code below as `index.html` and open it in a browser, or publish it with GitHub Pages as described in [Publish with GitHub Pages](github-pages.md).
+The `index.html` below is a complete, runnable mini-game (Commit Catcher). Save it and open it in a browser, or publish it with the steps in [Publish with GitHub Pages](github-pages.md).
 
 ````html
 <!DOCTYPE html>
